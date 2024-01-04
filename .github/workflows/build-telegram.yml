@@ -44,7 +44,7 @@ jobs:
           # modules="$modules -m Killergram*.apk" # Uncomment to enable module
           modules="$modules -m ./Backup/tmoe*.apk"       # Uncomment to enable module
           # modules="$modules -m ./Backup/TelegramHelper.apk"     # Uncomment to enable module
-          modules="$modules -m TG.H.*.apk     # Uncomment to enable module
+          modules="$modules -m TG.H.*.apk"     # Uncomment to enable module
           echo "$modules" > module_list.txt 
         shell: bash
 

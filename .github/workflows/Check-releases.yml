@@ -27,7 +27,7 @@ jobs:
       - name: Check for New Releases
         id: check-releases
         run: |
-          REPOS="LSPosed/LSPatch Xposed-Modules-Repo/io.github.tehcneko.telespeed shatyuka/Killergram Xposed-Modules-Repo/nep.timeline.re_telegram forkgram/TelegramAndroid NextAlone/Nagram Telegram-FOSS-Team/Telegram-FOSS Nekogram/Nekogram"
+          REPOS="LSPosed/LSPatch Xposed-Modules-Repo/io.github.tehcneko.telespeed shatyuka/Killergram Xposed-Modules-Repo/nep.timeline.re_telegram forkgram/TelegramAndroid NextAlone/Nagram Xposed-Modules-Repo/com.simo.tgramhooks Telegram-FOSS-Team/Telegram-FOSS Nekogram/Nekogram"
           RELEASES_FOUND=false # Assume no releases found initially
 
           for REPO in $REPOS; do
