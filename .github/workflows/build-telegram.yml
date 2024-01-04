@@ -38,24 +38,24 @@ jobs:
         id: create_module_list
         run: |
           modules=""
-          modules="$modules -m ./Backup/Re-Telegram*Release.apk" # Uncomment to enable module
+          modules="$modules -m ReTelegram*Release.apk" # Uncomment to enable module
           # modules="$modules -m telespeed.apk"  # Uncomment to enable module
           # modules="$modules -m telegram_hidestories*.apk" # Uncomment to enable module
           # modules="$modules -m Killergram*.apk" # Uncomment to enable module
-          # modules="$modules -m ./Backup/tmoe*.apk"       # Uncomment to enable module
+          modules="$modules -m ./Backup/tmoe*.apk"       # Uncomment to enable module
           # modules="$modules -m ./Backup/TelegramHelper.apk"     # Uncomment to enable module
-          modules="$modules -m ./Backup/TGramHooks*.apk"     # Uncomment to enable module
-          echo "$modules" > module_list.txt
+          modules="$modules -m TG.H.*.apk     # Uncomment to enable module
+          echo "$modules" > module_list.txt 
         shell: bash
 
-      #- name: Download Re-Telegram Module
-      #  run: |
-      #    # Get the filename from GitHub release
-      #    filename=$(curl -s https://api.github.com/repos/Sakion-Team/Re-Telegram/releases/latest | jq -r '.assets[] | select(.name | test("ReTelegram.*Release.apk")) | .name')
-      #    
-      #    # Download the file with the extracted filename
-      #    curl -L -o "$filename" $(curl -s https://api.github.com/repos/Sakion-Team/Re-Telegram/releases/latest | jq -r '.assets[] | select(.name | test("ReTelegram.*Release.apk")) | .browser_download_url')
-      #  shell: bash
+      - name: Download Re-Telegram Module
+        run: |
+          # Get the filename from GitHub release
+          filename=$(curl -s https://api.github.com/repos/Xposed-Modules-Repo/nep.timeline.re_telegram/releases/latest | jq -r '.assets[] | select(.name | test("ReTelegram.*Release.apk")) | .name')
+          
+          # Download the file with the extracted filename
+          curl -L -o "$filename" $(curl -s https://api.github.com/repos/Xposed-Modules-Repo/nep.timeline.re_telegram/releases/latest | jq -r '.assets[] | select(.name | test("ReTelegram.*Release.apk")) | .browser_download_url')
+        shell: bash
 
       - name: Download Killergram Module
         run: |
@@ -64,6 +64,15 @@ jobs:
           
           # Download the file with the extracted filename
           curl -L -o "$filename" $(curl -s https://api.github.com/repos/shatyuka/Killergram/releases/latest | jq -r '.assets[] | select(.name | test("Killergram.*.apk")) | .browser_download_url')
+        shell: bash
+
+      - name: Download TGramHooks Module
+        run: |
+          # Get the filename from GitHub release
+          filename=$(curl -s https://api.github.com/repos/Xposed-Modules-Repo/com.simo.tgramhooks/releases/latest | jq -r '.assets[] | select(.name | test("TG.H.*.apk")) | .name')
+          
+          # Download the file with the extracted filename
+          curl -L -o "$filename" $(curl -s https://api.github.com/repos/Xposed-Modules-Repo/com.simo.tgramhooks/releases/latest | jq -r '.assets[] | select(.name | test("TG.H.*.apk")) | .browser_download_url')
         shell: bash
 
       - name: Download Telegram-Hidestories Module

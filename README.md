@@ -20,7 +20,7 @@ We would like to thank the following:
   - [Killergram](https://github.com/shatyuka/Killergram)
   - [ReTelegram](https://github.com/Sakion-Team/Re-Telegram)
   - [HideStories](https://github.com/Xposed-Modules-Repo/ru.mike.sidestories)
-  - [TGramHooks](https://4pda.to/forum/index.php?showtopic=603033&st=1060#entry124676967) (Not Open-Source)
+  - [TGramHooks](https://github.com/Xposed-Modules-Repo/com.simo.tgramhooks) (Not Open-Source)
 - The Telegram clients:
   - [Telegram](https://telegram.org/android)
   - [Forkgram](https://github.com/forkgram/TelegramAndroid)
