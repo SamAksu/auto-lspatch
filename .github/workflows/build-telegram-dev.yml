@@ -1,6 +1,9 @@
-name: Download and Patch Modules
+name: Download and Patch Modules DEV
 
 on:
+  push:
+    branches:
+      - dev
   workflow_call:
   workflow_dispatch:
 
@@ -27,7 +30,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
         with:
-          ref: main
+          ref: dev
         
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -159,7 +162,7 @@ jobs:
         with:
           files: |
             *-lspatched.apk
-          tag_name: LSpatched
+          tag_name: LSpatched-dev
           draft: false
           body_path: release_body.txt
         env:
